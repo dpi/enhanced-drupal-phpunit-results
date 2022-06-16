@@ -1,0 +1,24 @@
+{
+  "name": "dpi/enhanced-drupal-phpunit-results",
+  "type": "library",
+  "require": {
+    "php": "^8",
+    "drupal/core": ">=9.3"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "authors": [
+    {
+      "name": "dpi",
+      "email": "pro@danielph.in"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "dpi\\EnhancedDrupalPhpunitResults\\": "src/",
+      "dpi\\EnhancedDrupalPhpunitResults\\tests\\": "tests/"
+    }
+  },
+  "license": "BSD-3-Clause"
+}
