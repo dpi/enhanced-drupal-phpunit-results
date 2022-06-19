@@ -1,24 +1,38 @@
 {
-  "name": "dpi/enhanced-drupal-phpunit-results",
-  "type": "library",
-  "require": {
-    "php": "^8",
-    "drupal/core": ">=9.3"
-  },
-  "config": {
-    "sort-packages": true
-  },
-  "authors": [
-    {
-      "name": "dpi",
-      "email": "pro@danielph.in"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "dpi\\EnhancedDrupalPhpunitResults\\": "src/",
-      "dpi\\EnhancedDrupalPhpunitResults\\tests\\": "tests/"
-    }
-  },
-  "license": "BSD-3-Clause"
+    "name": "dpi/enhanced-drupal-phpunit-results",
+    "type": "library",
+    "require": {
+        "php": "^8"
+    },
+    "require-dev": {
+        "behat/mink": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "dpi/drupal-phpunit-bootstrap": "^9.4",
+        "drupal/core": ">=10@alpha",
+        "mikey179/vfsstream": "^1.6.10",
+        "phpstan/phpstan": "^1.7",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-strict-rules": "^1.2",
+        "phpunit/phpunit": "^9.5.20"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "authors": [
+       {
+           "name": "dpi",
+           "email": "pro@danielph.in"
+       }
+    ],
+    "autoload": {
+        "psr-4": {
+            "dpi\\EnhancedDrupalPhpunitResults\\": "src/",
+            "dpi\\EnhancedDrupalPhpunitResults\\tests\\": "tests/"
+        }
+    },
+    "license": "BSD-3-Clause"
 }

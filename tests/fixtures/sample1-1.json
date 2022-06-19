@@ -1,0 +1,163 @@
+[
+    {
+        "class": "Drupal\\Tests\\my_module\\Functional\\MyModuleTest",
+        "name": "testTheThing",
+        "uri": "http:\/\/localhost:8080\/sites\/simpletest\/browser_output\/Drupal_Tests_my_module_Functional_MyModuleTest-1884-dtt.html",
+        "backtrace": [
+            {
+                "file": "\/home/user\/app\/core\/tests\/Drupal\/Tests\/BrowserHtmlDebugTrait.php",
+                "line": 198,
+                "function": "htmlOutput",
+                "class": "Drupal\\Tests\\my_module\\Functional\\MyTestBase",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/guzzlehttp\/promises\/src\/FulfilledPromise.php",
+                "line": 41,
+                "function": "Drupal\\Tests\\{closure}",
+                "class": "Drupal\\Tests\\my_module\\Functional\\MyTestBase",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/guzzlehttp\/promises\/src\/TaskQueue.php",
+                "line": 48,
+                "function": "GuzzleHttp\\Promise\\{closure}",
+                "class": "GuzzleHttp\\Promise\\FulfilledPromise",
+                "type": "::"
+            },
+            {
+                "file": "\/home/user\/vendor\/guzzlehttp\/promises\/src\/Promise.php",
+                "line": 248,
+                "function": "run",
+                "class": "GuzzleHttp\\Promise\\TaskQueue",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/guzzlehttp\/promises\/src\/Promise.php",
+                "line": 224,
+                "function": "invokeWaitFn",
+                "class": "GuzzleHttp\\Promise\\Promise",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/guzzlehttp\/promises\/src\/Promise.php",
+                "line": 269,
+                "function": "waitIfPending",
+                "class": "GuzzleHttp\\Promise\\Promise",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/guzzlehttp\/promises\/src\/Promise.php",
+                "line": 226,
+                "function": "invokeWaitList",
+                "class": "GuzzleHttp\\Promise\\Promise",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/guzzlehttp\/promises\/src\/Promise.php",
+                "line": 62,
+                "function": "waitIfPending",
+                "class": "GuzzleHttp\\Promise\\Promise",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/guzzlehttp\/guzzle\/src\/Client.php",
+                "line": 182,
+                "function": "wait",
+                "class": "GuzzleHttp\\Promise\\Promise",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/fabpot\/goutte\/Goutte\/Client.php",
+                "line": 174,
+                "function": "request",
+                "class": "GuzzleHttp\\Client",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/symfony\/browser-kit\/Client.php",
+                "line": 404,
+                "function": "doRequest",
+                "class": "Goutte\\Client",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/friends-of-behat\/mink-browserkit-driver\/src\/BrowserKitDriver.php",
+                "line": 145,
+                "function": "request",
+                "class": "Symfony\\Component\\BrowserKit\\Client",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/behat\/mink\/src\/Session.php",
+                "line": 148,
+                "function": "visit",
+                "class": "Behat\\Mink\\Driver\\BrowserKitDriver",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/core\/tests\/Drupal\/Tests\/UiHelperTrait.php",
+                "line": 334,
+                "function": "visit",
+                "class": "Behat\\Mink\\Session",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/core\/tests\/Drupal\/Tests\/UiHelperTrait.php",
+                "line": 253,
+                "function": "drupalGet",
+                "class": "Drupal\\Tests\\my_module\\Functional\\MyTestBase",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/modules\/custom\/my_module\/tests\/src\/Functional\/MyModuleTest.php",
+                "line": 22,
+                "function": "drupalLogin",
+                "class": "Drupal\\Tests\\my_module\\Functional\\MyTestBase",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/sites\/simpletest\/TestCase.php",
+                "line": 1547,
+                "function": "testTheThing",
+                "class": "Drupal\\Tests\\my_module\\Functional\\MyModuleTest",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/sites\/simpletest\/TestCase.php",
+                "line": 1153,
+                "function": "runTest",
+                "class": "PHPUnit\\Framework\\TestCase",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/vendor\/phpunit\/phpunit\/src\/Framework\/TestResult.php",
+                "line": 726,
+                "function": "runBare",
+                "class": "PHPUnit\\Framework\\TestCase",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/sites\/simpletest\/TestCase.php",
+                "line": 905,
+                "function": "run",
+                "class": "PHPUnit\\Framework\\TestResult",
+                "type": "->"
+            },
+            {
+                "file": "Standard input code",
+                "line": 67,
+                "function": "run",
+                "class": "PHPUnit\\Framework\\TestCase",
+                "type": "->"
+            },
+            {
+                "file": "Standard input code",
+                "line": 123,
+                "function": "__phpunit_run_isolated_test"
+            }
+        ],
+        "response_url": "http:\/\/localhost:8080\/user\/login",
+        "artifact_number": 1884
+    }
+]

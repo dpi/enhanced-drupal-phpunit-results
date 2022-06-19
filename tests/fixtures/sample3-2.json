@@ -1,0 +1,32 @@
+[
+    {
+        "class": "Drupal\\Tests\\my_module\\Functional\\MyModuleTest",
+        "name": "testDrupalGetIcon",
+        "uri": "http:\/\/localhost:8080\/sites\/simpletest\/browser_output\/Drupal_Tests_my_module_Functional_MyModuleTest-302-dtt.html",
+        "backtrace": [
+            {
+                "file": "\/home/user\/app\/core\/tests\/Drupal\/Tests\/UiHelperTrait.php",
+                "line": 253,
+                "function": "drupalGet",
+                "class": "Drupal\\Tests\\my_module\\Functional\\MyTestBase",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/sites\/simpletest\/TestCase.php",
+                "line": 1547,
+                "function": "testDrupalGetIcon",
+                "class": "Drupal\\Tests\\my_module\\Functional\\MyModuleTest",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/sites\/simpletest\/TestCase.php",
+                "line": 1153,
+                "function": "runTest",
+                "class": "PHPUnit\\Framework\\TestCase",
+                "type": "->"
+            }
+        ],
+        "response_url": "http:\/\/localhost:8080\/user\/login",
+        "artifact_number": 302
+    }
+]

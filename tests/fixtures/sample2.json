@@ -1,0 +1,39 @@
+[
+    {
+        "class": "Drupal\\Tests\\my_module\\Functional\\MyModuleTest",
+        "name": "testTheThing with data set \"is disabled\"",
+        "uri": "http:\/\/localhost:8080\/sites\/simpletest\/browser_output\/Drupal_Tests_my_module_Functional_MyModuleTest-200-dtt.html",
+        "backtrace": [
+            {
+                "file": "\/home/user\/app\/core\/tests\/Drupal\/Tests\/UiHelperTrait.php",
+                "line": 253,
+                "function": "drupalGet",
+                "class": "Drupal\\Tests\\my_module\\Functional\\MyTestBase",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/modules\/custom\/my_module\/tests\/src\/Functional\/MyModuleTest.php",
+                "line": 22,
+                "function": "drupalLogin",
+                "class": "Drupal\\Tests\\my_module\\Functional\\MyTestBase",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/sites\/simpletest\/TestCase.php",
+                "line": 1547,
+                "function": "testTheThing",
+                "class": "Drupal\\Tests\\my_module\\Functional\\MyModuleTest",
+                "type": "->"
+            },
+            {
+                "file": "\/home/user\/app\/sites\/simpletest\/TestCase.php",
+                "line": 1153,
+                "function": "runTest",
+                "class": "PHPUnit\\Framework\\TestCase",
+                "type": "->"
+            }
+        ],
+        "response_url": "http:\/\/localhost:8080\/user\/login",
+        "artifact_number": 200
+    }
+]
