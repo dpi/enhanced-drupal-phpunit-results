@@ -269,6 +269,7 @@ class EnhancedResultPrinter extends DefaultResultPrinter
             if (\in_array($item['function'] ?? null, [
                 'drupalGet',
                 'drupalLogin',
+                'drupalLogout',
                 'htmlOutput',
                 'submitForm',
             ], true)) {
@@ -293,6 +294,7 @@ class EnhancedResultPrinter extends DefaultResultPrinter
         return match ($stack[$k]['function'] ?? null) {
             'drupalGet' => '📄',
             'drupalLogin' => '🛂',
+            'drupalLogout' => '🥾',
             'submitForm' => '🖍',
             'htmlOutput' => '⚡️',
             default => '❓',
