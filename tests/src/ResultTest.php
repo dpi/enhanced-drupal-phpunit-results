@@ -102,6 +102,16 @@ final class ResultTest extends TestCase
             OUT, $display);
     }
 
+    public function testDisableOutputStack(): void
+    {
+        putenv('ENHANCED_RESULTS_DISABLE_OUTPUT_STACK=TRUE');
+        $display = $this->runFixture(__DIR__ . '/../fixtures/sample4-1.json');
+        $this->assertStringContainsString('Drupal\Tests\my_module\Functional\MyModuleTest::testMultiLevel', $display);
+        $this->assertStringContainsString(<<<OUT
+             #401 ]8;;http://localhost:8080/sites/simpletest/browser_output/Drupal_Tests_my_module_Functional_MyModuleTest-401-dtt.html\http://localhost:8080/user/login]8;;\ 📄
+            OUT, $display);
+    }
+
     public function testUseRepeatContextSingleStack(): void
     {
         putenv('ENHANCED_RESULTS_USE_REPEAT_CONTEXT=TRUE');
