@@ -25,6 +25,7 @@ class EnhancedResultPrinter extends DefaultResultPrinter
     private bool $useSequential = false;
     private string $ideLaunch = self::IDE_LAUNCH['phpstorm'];
     private ?string $filePrefix = null;
+    private bool $outputStack = true;
 
     protected const IDE_LAUNCH = [
         'emacs' => 'emacs://open?url=file://%s&line=%s',
@@ -51,6 +52,9 @@ class EnhancedResultPrinter extends DefaultResultPrinter
         }
         if (getenv('ENHANCED_RESULTS_DISABLE_TRIM_COLUMNS')) {
             $this->useTrimColumns = false;
+        }
+        if (getenv('ENHANCED_RESULTS_DISABLE_OUTPUT_STACK')) {
+            $this->outputStack = false;
         }
         $filePrefix = getenv('ENHANCED_RESULTS_FILE_PREFIX');
         if (\is_string($filePrefix) && \strlen($filePrefix) > 0) {
@@ -181,31 +185,33 @@ class EnhancedResultPrinter extends DefaultResultPrinter
             $this->writeNewLine();
         }
 
-        $stackStringed = [];
-        foreach ($stack as $item) {
-            if (1 === \count($stack)) {
-                $stackStringed[] = sprintf("%s\n",
-                    $this->colorizeTextBox('bg-black, fg-green', $fileAndLine($item, 0, $linePad + 3)),
-                );
-                break;
-            } else {
-                $stackStringed[] = sprintf("%s\n%s\n",
-                    $this->colorizeTextBox('bg-black, fg-yellow', $reference($item)),
-                    $this->colorizeTextBox('bg-black, fg-green', $fileAndLine($item, 3, $linePad + 3)),
-                );
+        if ($this->outputStack) {
+            $stackStringed = [];
+            foreach ($stack as $item) {
+                if (1 === \count($stack)) {
+                    $stackStringed[] = sprintf("%s\n",
+                        $this->colorizeTextBox('bg-black, fg-green', $fileAndLine($item, 0, $linePad + 3)),
+                    );
+                    break;
+                } else {
+                    $stackStringed[] = sprintf("%s\n%s\n",
+                        $this->colorizeTextBox('bg-black, fg-yellow', $reference($item)),
+                        $this->colorizeTextBox('bg-black, fg-green', $fileAndLine($item, 3, $linePad + 3)),
+                    );
+                }
             }
-        }
 
-        $this->write(
-            $this->leftPad(
-                sprintf(
-                    '-> %s',
-                    trim(implode('-> ', $stackStringed))
-                ),
-                $linePad,
-            )
-        );
-        $this->writeNewLine();
+            $this->write(
+                $this->leftPad(
+                    sprintf(
+                        '-> %s',
+                        trim(implode('-> ', $stackStringed))
+                    ),
+                    $linePad,
+                )
+            );
+            $this->writeNewLine();
+        }
     }
 
     private function leftPad(string $str, int $padding): string

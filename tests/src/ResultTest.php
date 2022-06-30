@@ -21,6 +21,7 @@ final class ResultTest extends TestCase
         putenv('ENHANCED_RESULTS_IDE');
         putenv('ENHANCED_RESULTS_USE_REPEAT_CONTEXT');
         putenv('ENHANCED_RESULTS_USE_SEQUENTIAL_IDS');
+        putenv('ENHANCED_RESULTS_DISABLE_OUTPUT_STACK');
         putenv('ENHANCED_RESULTS_DISABLE_TRIM_COLUMNS');
         putenv('ENHANCED_RESULTS_FILE_PREFIX');
 
@@ -110,6 +111,16 @@ final class ResultTest extends TestCase
                      ]8;;phpstorm://open?file=/home/user/app/sites/simpletest/TestCase.php&line=3000\/home/user/app/sites/simpletest/TestCase.php:3000]8;;\
                   -> Drupal\Tests\my_module\Functional\MyTestBase::drupalGet
                      ]8;;phpstorm://open?file=/home/user/app/core/tests/Drupal/Tests/UiHelperTrait.php&line=253\/home/user/app/core/tests/Drupal/Tests/UiHelperTrait.php:253]8;;\
+            OUT, $display);
+    }
+
+    public function testDisableOutputStack(): void
+    {
+        putenv('ENHANCED_RESULTS_DISABLE_OUTPUT_STACK=TRUE');
+        $display = $this->runFixture(__DIR__ . '/../fixtures/sample4-1.json');
+        $this->assertStringContainsString('Drupal\Tests\my_module\Functional\MyModuleTest::testMultiLevel', $display);
+        $this->assertStringContainsString(<<<OUT
+             #401 ]8;;http://localhost:8080/sites/simpletest/browser_output/Drupal_Tests_my_module_Functional_MyModuleTest-401-dtt.html\http://localhost:8080/user/login]8;;\ 📄
             OUT, $display);
     }
 
