@@ -58,6 +58,17 @@ final class ResultTest extends TestCase
             OUT, $display);
     }
 
+    public function testIconLogout(): void
+    {
+        $display = $this->runFixture(__DIR__ . '/../fixtures/sample3-5.json');
+        $this->assertStringContainsString('Drupal\Tests\my_module\Functional\MyModuleTest::testLogoutIcon', $display);
+        $this->assertStringContainsString(<<<OUT
+             #305 ]8;;http://localhost:8080/sites/simpletest/browser_output/Drupal_Tests_my_module_Functional_MyModuleTest-305-dtt.html\http://localhost:8080/user/login]8;;\ 🥾
+                  -> ]8;;phpstorm://open?file=/home/user/app/modules/custom/my_module/tests/src/Functional/MyModuleTest.php&line=22\/home/user/app/modules/custom/my_module/tests/src/Functional/MyModuleTest.php:22]8;;\
+            OUT
+, $display);
+    }
+
     public function testIconDrupalGet(): void
     {
         $display = $this->runFixture(__DIR__ . '/../fixtures/sample3-2.json');
