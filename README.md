@@ -19,8 +19,8 @@ Provides tooling to improve the output of PHPUnit tests with Drupal.
  - Command-click/control click URL to open artifact in web browser.
  - Command-click/control click file+line to open in IDE (PHPStorm / VSCode / MacVim / Emacs / Sublime Text / Textmate)
  - The URL fetched is shown.
- - `drupalGet`/`drupalLogin`/`htmlOutput`/`submitForm` page loads are detected,
- - Icon shown indicating whether artifact is associated with a page load: 📄 `drupalGet` 🛂 `drupalLogin` ⚡️ `htmlOutput` 🖍 `submitForm`
+ - `drupalGet`/`drupalLogin`/`drupalLogout`/`htmlOutput`/`submitForm` page loads are detected,
+ - Icon shown indicating whether artifact is associated with a page load: 📄 `drupalGet` 🛂 `drupalLogin` 🥾 `drupalLogout` ⚡️ `htmlOutput` 🖍 `submitForm`
  - Test method is green or red depending on test pass/failure.
  - Execution stack is shown between the test method and the point of page load.
  - For direct invocations of page load from a test, a short stack is shown.
