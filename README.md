@@ -119,6 +119,18 @@ will display untruncated.
 </php>
 ```
 
+### Disable stacks
+
+Disable long stacks if they are noisy
+
+`export ENHANCED_RESULTS_DISABLE_OUTPUT_STACK=TRUE`
+
+```xml
+<php>
+    <env name="ENHANCED_RESULTS_DISABLE_OUTPUT_STACK" value="TRUE" />
+</php>
+```
+
 ![IDE Launch Links](docs/notruncation.png)
 
 ### Use sequential IDS instead of artifact numbers
