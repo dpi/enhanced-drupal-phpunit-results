@@ -21,6 +21,7 @@ final class ResultTest extends TestCase
         putenv('ENHANCED_RESULTS_IDE');
         putenv('ENHANCED_RESULTS_USE_REPEAT_CONTEXT');
         putenv('ENHANCED_RESULTS_USE_SEQUENTIAL_IDS');
+        putenv('ENHANCED_RESULTS_DISABLE_OUTPUT_STACK');
         putenv('ENHANCED_RESULTS_DISABLE_TRIM_COLUMNS');
         putenv('ENHANCED_RESULTS_FILE_PREFIX');
 
