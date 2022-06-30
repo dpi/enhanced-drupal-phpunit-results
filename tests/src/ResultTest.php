@@ -200,6 +200,13 @@ final class ResultTest extends TestCase
         $this->assertStringContainsString('phpstorm://open?file=/home/user/www/home/user/app/modules/custom/my_module/tests/src/Functional/MyModuleTest.php&line=22', $display);
     }
 
+    public function testBuggyEmptyStack(): void
+    {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('Nothing in the stack');
+        $this->runFixture(__DIR__ . '/../fixtures/sample9-1.json');
+    }
+
     private function runFixture(string $fixture, int $maxColumns = 200): string
     {
         $out = fopen('php://memory', 'w', false) ?: throw new \Exception('Failed to create memory stream');

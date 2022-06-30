@@ -1,0 +1,11 @@
+[
+    {
+        "class": "Drupal\\Tests\\my_module\\Functional\\MyModuleTest",
+        "name": "testNoStack",
+        "uri": "http:\/\/localhost:8080\/sites\/simpletest\/browser_output\/Drupal_Tests_my_module_Functional_MyModuleTest-901-dtt.html",
+        "backtrace": [
+        ],
+        "response_url": "http:\/\/localhost:8080\/user\/login",
+        "artifact_number": 901
+    }
+]
