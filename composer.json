@@ -31,7 +31,7 @@
     "autoload": {
         "psr-4": {
             "dpi\\EnhancedDrupalPhpunitResults\\": "src/",
-            "dpi\\EnhancedDrupalPhpunitResults\\tests\\": "tests/"
+            "dpi\\EnhancedDrupalPhpunitResults\\tests\\": "tests/src/"
         }
     },
     "license": "BSD-3-Clause"
